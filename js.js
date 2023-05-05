@@ -1,4 +1,4 @@
-function getComputerChoice(){
+function getComputerChoice() {
     let choice = Math.floor(Math.random() * 3);
 
     switch (choice) {
@@ -8,7 +8,7 @@ function getComputerChoice(){
     }
 }
 
-function playRound(playerSelection, computerSelection){
+function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
 
     if(playerSelection === 'rock' && computerSelection === 'scissors' || playerSelection === 'paper' && computerSelection === 'rock' || playerSelection === 'scissors' && computerSelection === 'paper'){
@@ -20,6 +20,14 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-const playerSelection = 'rock';
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+function game() {
+    for (let i = 1; i <= 5; i++){
+        let playerSelection = prompt(`Round ${i} : Choose rock, paper or scissors`);
+
+        let computerSelection = getComputerChoice();
+
+        console.log(playRound(playerSelection,computerSelection));
+    }
+}
+
+game();
