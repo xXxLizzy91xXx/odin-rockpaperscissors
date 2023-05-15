@@ -25,17 +25,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    //5 rounds
-    for (let i = 1; i <= 5; i++){
-        //Ask user for their selection
-        let playerSelection = prompt(`Round ${i} : Choose rock, paper or scissors`);
-
-        //Gets computer selection
-        let computerSelection = getComputerChoice();
-        
-        // Displays results in console
-        console.log(playRound(playerSelection,computerSelection));
-    }
+    
 }
 
 //Starts the game
